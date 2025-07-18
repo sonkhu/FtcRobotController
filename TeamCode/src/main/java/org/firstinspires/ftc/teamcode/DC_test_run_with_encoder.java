@@ -34,19 +34,19 @@ public class DC_test_run_with_encoder extends LinearOpMode {            //DC_tes
                 mymotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);   //mymotor 가 설정된 엔코더 포지션까지 작동한다.
             }
 
-            if (gamepad1.a) {                                       //만약 게임패드 a를 눌렀다면
+            if (gamepad1.b) {                                       //만약 게임패드 b를 눌렀다면
                 mymotor.setTargetPosition(2000);                    //mymotor 의 목표 엔코더 값을 2000으로 설정한다.
                 mymotor.setPower(1);                                //mymotor 의 파워를 1로 설정한다.
                 mymotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);   //mymotor 가 설정된 엔코더 포지션까지 작동한다.
             }
 
-            if (gamepad1.a) {                                       //만약 게임패드 a를 눌렀다면
+            if (gamepad1.x) {                                       //만약 게임패드 x를 눌렀다면
                 mymotor.setTargetPosition(-1000);                   //mymotor 의 목표 엔코더 값을 -1000으로 설정한다.
                 mymotor.setPower(1);                                //mymotor 의 파워를 1로 설정한다.
                 mymotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);   //mymotor 가 설정된 엔코더 포지션까지 작동한다.
             }
 
-            if (gamepad1.a) {                                       //만약 게임패드 a를 눌렀다면
+            if (gamepad1.y) {                                       //만약 게임패드 y를 눌렀다면
                 mymotor.setTargetPosition(-2000);                   //mymotor 의 목표 엔코더 값을 -2000으로 설정한다.
                 mymotor.setPower(1);                                //mymotor 의 파워를 1로 설정한다.
                 mymotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);   //mymotor 가 설정된 엔코더 포지션까지 작동한다.
@@ -58,6 +58,7 @@ public class DC_test_run_with_encoder extends LinearOpMode {            //DC_tes
 
             telemetry.addData("현재 엔코더값: ", mymotor.getCurrentPosition());
             telemetry.addData("현재 목표 엔코더값: ", mymotor.getTargetPosition());
+            telemetry.update();
 
         }
 
