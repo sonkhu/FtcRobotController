@@ -36,7 +36,7 @@ public class DC_test_without_Encoder2 extends LinearOpMode {            //test �
 
             if (gamepad1.dpad_right) {                                      //만약 d패드 오른쪽을 눌렀다면
                 mymotor.setDirection(DcMotorSimple.Direction.FORWARD);      //서보 모터의 회번 장향을 정방향으로
-            }
+            }fdsgxchjvb
 
         }
 
