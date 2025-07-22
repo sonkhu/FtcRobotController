@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp         //사용자가 직접 조종하는 코드다!
 
-public class DC_test_without_Encoder2 extends LinearOpMode {            //test 라는 이름의 로봇 제어 코드를 LinearOpMode 방식으로 작성하겠다!
+public class DC_test_without_Encoder3 extends LinearOpMode {            //test 라는 이름의 로봇 제어 코드를 LinearOpMode 방식으로 작성하겠다!
 
     @Override
 
@@ -37,6 +37,11 @@ public class DC_test_without_Encoder2 extends LinearOpMode {            //test �
             if (gamepad1.dpad_right) {                                      //만약 d패드 오른쪽을 눌렀다면
                 mymotor.setDirection(DcMotorSimple.Direction.FORWARD);      //서보 모터의 회번 장향을 정방향으로
             }
+
+            telemetry.addData("현재 조이스틱 x값: ", gamepad1.right_stick_x);
+            telemetry.addData("현재 조이스틱 y값: ", gamepad1.right_stick_y);
+            telemetry.addData("모터1 회전방향: ", mymotor.getDirection());
+            telemetry.update();
 
         }
 
